@@ -21,7 +21,7 @@ const Home: React.FC = () => {
             <span className="text-terracotta font-sans text-sm uppercase tracking-[0.4em] font-semibold">Welcome to</span>
           </div>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif italic mb-10 leading-tight text-sage drop-shadow-lg">
-            "Some experiences don't just stay with you—they quietly reshape you."
+            "Compassion is not a weakness—it's the courage to remain human while doing difficult work."
           </h2>
           <div className="flex items-center justify-center gap-4 mb-10">
             <div className="w-16 h-px bg-terracotta/60"></div>
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             <div className="w-16 h-px bg-terracotta/60"></div>
           </div>
           <p className="text-base md:text-lg font-sans text-charcoal/70 font-medium uppercase tracking-[0.25em] max-w-2xl mx-auto mb-12">
-            Human-centered leadership for law students, lawyers, and judges
+            Transforming legal practice through compassion, connection, and care
           </p>
           <Link
             to="/contact"
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
       <section className="py-28 px-6 max-w-5xl mx-auto text-center relative">
         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full bg-terracotta/5 blur-3xl"></div>
         <p className="text-2xl md:text-3xl lg:text-4xl font-serif leading-relaxed text-sage mb-16 italic relative">
-          The Compassionate Law Project develops human-centered leaders across the legal profession through evidence-informed trainings and retreats that nurture well-being, enhance decision quality, and build healthier cultures.
+          We believe that compassion belongs at the heart of legal practice. The Compassionate Law Project helps legal professionals develop the skills and resilience to sustain their commitment to justice—while caring deeply for themselves and those they serve.
         </p>
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 text-left items-stretch mt-20">
           <div className="group p-8 md:p-10 rounded-lg bg-gradient-to-br from-cream to-cream-darker border border-sage/10 hover:border-terracotta/30 hover:shadow-xl transition-all duration-500">
@@ -65,17 +65,17 @@ const Home: React.FC = () => {
               <h3 className="text-terracotta font-sans uppercase tracking-[0.2em] text-sm font-bold">Why This Matters</h3>
             </div>
             <p className="font-sans leading-relaxed text-charcoal/80 text-lg">
-              Legal professionals face cumulative exposure to conflict, trauma, and high-stakes decisions—often without tools to sustain them. Burnout, isolation, and decision fatigue are widespread. We offer a different path.
+              The legal profession asks people to carry enormous weight—conflict, trauma, and life-altering decisions accumulate over time. Without intentional practices of self-compassion and community support, even the most dedicated professionals burn out. We offer evidence-based tools rooted in compassion science to help you thrive.
             </p>
           </div>
           <div className="group p-8 md:p-10 rounded-lg bg-sage/5 border-l-4 border-sage hover:bg-sage/10 transition-all duration-500">
             <h3 className="text-sage font-serif text-2xl font-bold mb-6">What We Do</h3>
             <ul className="space-y-5">
               {[
-                "Stay grounded and present under pressure",
-                "Lead with clarity and humanity",
-                "Reduce isolation and strengthen culture",
-                "Translate compassion into practical habits"
+                "Cultivate self-compassion as a foundation for sustainable practice",
+                "Lead with both clarity and deep humanity",
+                "Build communities of care that reduce professional isolation",
+                "Transform compassion from aspiration into daily practice"
               ].map((item, i) => (
                 <li key={i} className="flex gap-4 items-start font-sans text-charcoal/70 group/item hover:text-charcoal transition-colors">
                   <span className="w-6 h-6 rounded-full bg-terracotta/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -101,9 +101,9 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             {[
-              { title: "Courts & Judges", icon: "🏛️", desc: "Supporting those who shape justice every day" },
-              { title: "Lawyers & Law Firms", icon: "⚖️", desc: "Building sustainable practices and cultures" },
-              { title: "Law Schools & Students", icon: "🎓", desc: "Preparing the next generation of leaders" }
+              { title: "Courts & Judges", icon: "🏛️", desc: "Nurturing compassionate decision-making on the bench" },
+              { title: "Lawyers & Law Firms", icon: "⚖️", desc: "Building cultures where compassion and excellence thrive together" },
+              { title: "Law Schools & Students", icon: "🎓", desc: "Shaping compassionate advocates from the start" }
             ].map((item, i) => (
               <div key={i} className="group bg-cream p-10 md:p-12 text-center rounded-xl shadow-md border border-sage/10 hover:border-terracotta/40 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta/0 to-terracotta/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

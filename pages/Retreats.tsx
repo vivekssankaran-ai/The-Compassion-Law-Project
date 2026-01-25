@@ -20,7 +20,7 @@ const Retreats: React.FC = () => {
             <div className="w-12 h-px bg-cream/30"></div>
           </div>
           <p className="text-xl md:text-2xl font-serif italic text-cream/80 tracking-wide max-w-3xl mx-auto">
-            Professional "PPE" for doing difficult legal work well
+            Immersive experiences that restore your capacity for compassion—toward yourself and those you serve
           </p>
         </div>
       </section>
@@ -36,14 +36,14 @@ const Retreats: React.FC = () => {
           </div>
           <div className="md:col-span-2 space-y-8 text-lg font-sans leading-relaxed text-charcoal/80">
             <p className="text-xl">
-              Legal work is demanding and cumulative. Conflict, trauma exposure, and high-stakes decisions add up over time—often invisibly. Retreats create rare space to step back, restore capacity, and build the skills and community that sustain us for the long haul.
+              Compassion fatigue is real. When you spend your days absorbing others' pain and making weighty decisions, your capacity for care—including self-care—becomes depleted. Our retreats create sacred space to replenish your compassion reserves, reconnect with your purpose, and build a community of professionals who understand what you carry.
             </p>
             <div className="relative p-8 md:p-10 bg-gradient-to-br from-sage/5 to-sage/10 rounded-xl border-l-4 border-sage">
               <svg className="absolute top-4 left-6 w-8 h-8 text-sage/20" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
               <p className="italic text-sage text-lg md:text-xl pl-8">
-                Unlike a typical CLE, our retreats are immersive experiences designed to help you reconnect with why you entered this work—and develop practical tools to protect your well-being while doing it well.
+                Unlike a typical CLE, our retreats are grounded in the science of compassion. You'll learn evidence-based practices for self-compassion, emotional resilience, and sustainable care—then experience them in a community of peers who truly understand your work.
               </p>
             </div>
           </div>
@@ -113,6 +113,79 @@ const Retreats: React.FC = () => {
         </div>
       </section>
 
+      {/* Upcoming Retreats Section */}
+      <section className="py-28 px-6 bg-cream relative">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-terracotta/30 to-transparent"></div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Join Us</span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4">Upcoming Retreats</h2>
+            <p className="text-charcoal/60 mt-4 max-w-2xl mx-auto">Reserve your spot for an immersive experience designed to restore and strengthen your practice.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { date: "April 2025", location: "North Dakota", audience: "Family Court Judges & Professionals", status: "Open" },
+              { date: "June 2025", location: "Texas", audience: "Legal Professionals", status: "Open" },
+              { date: "September 2025", location: "Michigan", audience: "Child Welfare Advocates", status: "Coming Soon" },
+              { date: "October 2025", location: "Michigan", audience: "Judges & Court Staff", status: "Coming Soon" }
+            ].map((retreat, i) => (
+              <div key={i} className="group relative bg-gradient-to-br from-cream to-cream-darker p-8 rounded-xl border border-sage/10 hover:border-terracotta/30 hover:shadow-xl transition-all duration-500">
+                <div className="absolute top-4 right-4">
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${retreat.status === 'Open' ? 'bg-terracotta/10 text-terracotta' : 'bg-sage/10 text-sage'}`}>
+                    {retreat.status}
+                  </span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sage transition-colors duration-300">
+                    <svg className="w-7 h-7 text-sage group-hover:text-cream transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-2xl font-bold text-sage mb-1 group-hover:text-terracotta transition-colors">{retreat.date}</h3>
+                    <p className="text-terracotta font-semibold mb-2">{retreat.location}</p>
+                    <p className="text-charcoal/60 text-sm">{retreat.audience}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <a href="mailto:vivekssankaran@gmail.com?subject=Retreat%20Registration%20Interest" className="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-sage transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl">
+              Register Your Interest
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Past Retreats Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-cream to-cream-darker relative">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-sage/60 font-sans text-xs uppercase tracking-[0.3em] font-bold">Our Journey</span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-sage/80 mt-4">Past Retreats</h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { date: "December 2024", location: "Georgia" },
+              { date: "October 2024", location: "Washington" },
+              { date: "October 2024", location: "Colorado" },
+              { date: "September 2024", location: "Michigan" }
+            ].map((retreat, i) => (
+              <div key={i} className="flex items-center gap-3 px-5 py-3 bg-sage/5 rounded-full border border-sage/10">
+                <div className="w-2 h-2 rounded-full bg-sage/40"></div>
+                <span className="text-charcoal/60 font-sans text-sm">
+                  <span className="font-semibold text-sage/70">{retreat.date}</span> • {retreat.location}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-28 px-6 bg-cream relative">
         <div className="max-w-5xl mx-auto">
@@ -154,9 +227,9 @@ const Retreats: React.FC = () => {
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Ready for a reset?</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Ready to restore your compassion?</h2>
           <p className="text-cream/70 text-lg mb-10 max-w-xl mx-auto">
-            Join our community of legal professionals committed to sustainable, human-centered practice.
+            Join our community of legal professionals who believe that caring for yourself is essential to caring for others.
           </p>
           <a href="mailto:vivekssankaran@gmail.com?subject=Retreat%20Interest" className="inline-flex items-center gap-3 px-10 py-5 bg-terracotta hover:bg-cream hover:text-sage transition-all duration-300 font-sans font-bold uppercase tracking-widest shadow-xl rounded-lg hover:shadow-2xl hover:-translate-y-1">
             Get notified about upcoming retreats

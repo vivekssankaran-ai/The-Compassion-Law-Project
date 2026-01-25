@@ -5,24 +5,24 @@ const About: React.FC = () => {
   const team = [
     {
       name: "Vivek Sankaran",
-      title: "Clinical Professor of Law, University of Michigan",
-      image: "/vivek.jpg",
-      bio: "Vivek is a certified Ambassador of Applied Compassion through Stanford University's CCARE. At Michigan Law, he directs the Child Advocacy Law Clinic and has litigated numerous cases before the Michigan Supreme Court.",
-      credentials: ["Stanford CCARE Ambassador", "Child Advocacy Expert", "Michigan Supreme Court Litigator"]
+      title: "Clinical Professor of Law, University of Michigan Law School",
+      image: "/Vivek.jpg",
+      bio: "Vivek is a Clinical Professor of Law at the University of Michigan Law School, where he directs the Child Advocacy Law Clinic and the Child Welfare Appellate Clinic. He founded the Detroit Center for Family Advocacy, an innovative program that prevents unnecessary foster care placements by addressing concrete family needs. Vivek has litigated numerous cases before the Michigan Supreme Court and is a certified Ambassador of Applied Compassion through Stanford University's Center for Compassion and Altruism Research and Education (CCARE). His work bridges the gap between legal excellence and human-centered practice, helping legal professionals sustain their commitment to justice while caring for themselves and those they serve.",
+      credentials: ["Stanford CCARE Ambassador", "Detroit Center for Family Advocacy Founder", "Child Advocacy Law Clinic Director"]
     },
     {
       name: "Bridgette Carr",
-      title: "Associate Dean, University of Michigan Law School",
-      image: "/bridgette.jpg",
-      bio: "Bridgette founded the nation's first Human Trafficking Clinic. Her drive for creating compassionate systems is fueled by her belief that if work can harm, work can also heal.",
-      credentials: ["Human Trafficking Clinic Founder", "Associate Dean", "Systems Change Leader"]
+      title: "Associate Dean for Equity, Justice & Community & Clinical Professor of Law, University of Michigan Law School",
+      image: "/Bridgette.jpg",
+      bio: "Bridgette is the Associate Dean for Equity, Justice & Community and a Clinical Professor of Law at the University of Michigan Law School. She founded the nation's first Human Trafficking Clinic in 2009 and has spent her career creating systems that respond to harm with humanity. Bridgette has served as a Title IX hearing officer and brings deep expertise in trauma-informed practice and institutional culture change. Her driving belief is that if work can harm, work can also heal—and she's dedicated to proving that compassionate systems are not only possible but more effective.",
+      credentials: ["Human Trafficking Clinic Founder", "Associate Dean for Equity, Justice & Community", "Title IX Hearing Officer"]
     },
     {
       name: "Rick Barinbaum, LMSW",
-      title: "Clinical Social Worker & Consultant",
-      image: "/rick.png",
-      bio: "Rick focuses on building resilient teams in high-stress environments. He provides consulting on compassion-based practice and team well-being across the country.",
-      credentials: ["Licensed Clinical Social Worker", "Team Resilience Expert", "National Consultant"]
+      title: "Licensed Master Social Worker & Facilitator",
+      image: "/Rick.png",
+      bio: "Rick is a Licensed Master Social Worker who teaches at the University of Michigan School of Social Work. He serves as a facilitator for the Michigan State Bar's Commission on Well-Being in the Law, bringing expertise in resilience, self-compassion, and sustainable practice to legal professionals across the state. Rick specializes in building resilient teams in high-stress environments and provides consulting on compassion-based practice and team well-being. His background in social work brings a unique perspective to the legal profession, helping lawyers and judges develop practical tools for maintaining their humanity while doing difficult work.",
+      credentials: ["Licensed Master Social Worker", "University of Michigan School of Social Work Faculty", "Michigan Commission on Well-Being in the Law Facilitator"]
     }
   ];
 
@@ -39,7 +39,7 @@ const About: React.FC = () => {
           <div className="w-12 h-px bg-terracotta/40"></div>
         </div>
         <p className="text-xl md:text-2xl font-serif italic text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-          We help people in legal systems do difficult work without losing their humanity.
+          United by a shared belief: compassion is not a soft skill—it's the foundation of effective, sustainable legal practice.
         </p>
       </section>
 
@@ -91,9 +91,9 @@ const About: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 px-6 bg-gradient-to-b from-cream to-cream-darker">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-sage mb-6">Ready to work with us?</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-sage mb-6">Ready to bring compassion to your practice?</h2>
           <p className="text-charcoal/60 text-lg mb-10 max-w-2xl mx-auto">
-            Let's discuss how we can bring human-centered leadership to your organization.
+            Let's explore how compassion-centered training can transform your organization and support your people.
           </p>
           <Link
             to="/contact"
