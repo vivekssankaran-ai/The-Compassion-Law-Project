@@ -78,31 +78,26 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </button>
         </nav>
 
-        {/* Mobile Menu Overlay */}
-        <div
-          className={`md:hidden fixed inset-x-0 top-20 bottom-0 bg-sage z-40 flex flex-col px-6 py-8 gap-4 shadow-2xl transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
-        >
-          {[
-            { to: "/", label: "Home" },
-            { to: "/retreats", label: "Retreats" },
-            { to: "/trainings", label: "Trainings" },
-            { to: "/about", label: "About" }
-          ].map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className={`text-xl font-serif font-bold py-3 border-b border-cream/20 transition-colors ${pathname === item.to ? 'text-terracotta' : 'text-cream hover:text-terracotta'}`}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Link
-            to="/contact"
-            className="text-lg font-serif font-bold text-sage bg-cream px-6 py-4 rounded-lg text-center mt-4 hover:bg-terracotta hover:text-cream transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
+        {/* Mobile Dropdown Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute right-4 top-16 bg-sage rounded-lg shadow-xl z-50 min-w-48 py-2 border border-sage-light">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/retreats", label: "Retreats" },
+              { to: "/trainings", label: "Trainings" },
+              { to: "/about", label: "About" },
+              { to: "/contact", label: "Contact" }
+            ].map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={`block px-5 py-3 text-base font-sans transition-colors ${pathname === item.to ? 'text-terracotta bg-sage-light/30' : 'text-cream hover:bg-sage-light/20 hover:text-terracotta'}`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </header>
 
       <main className="flex-grow">
