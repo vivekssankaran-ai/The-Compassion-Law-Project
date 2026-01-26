@@ -31,6 +31,18 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className="min-h-screen flex flex-col selection:bg-terracotta/20 font-sans text-charcoal bg-cream">
       <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-cream/95 backdrop-blur-lg shadow-md' : 'bg-cream/80 backdrop-blur-sm'}`}>
@@ -66,30 +78,31 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </button>
         </nav>
 
-        {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-20 bg-cream/98 backdrop-blur-lg z-40 flex flex-col p-8 gap-6 animate-in slide-in-from-top duration-300">
-            {[
-              { to: "/", label: "Home" },
-              { to: "/retreats", label: "Retreats" },
-              { to: "/trainings", label: "Trainings" },
-              { to: "/about", label: "About" }
-            ].map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className={`text-2xl font-serif font-bold transition-colors ${pathname === item.to ? 'text-terracotta' : 'text-sage hover:text-terracotta'}`}
-              >
-                {item.label}
-              </Link>
-            ))}
+        {/* Mobile Menu Overlay */}
+        <div
+          className={`md:hidden fixed inset-x-0 top-20 bottom-0 bg-cream z-40 flex flex-col px-6 py-8 gap-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
+        >
+          {[
+            { to: "/", label: "Home" },
+            { to: "/retreats", label: "Retreats" },
+            { to: "/trainings", label: "Trainings" },
+            { to: "/about", label: "About" }
+          ].map((item) => (
             <Link
-              to="/contact"
-              className="text-2xl font-serif font-bold text-cream bg-terracotta px-6 py-3 rounded-lg text-center mt-4 hover:bg-sage transition-colors"
+              key={item.to}
+              to={item.to}
+              className={`text-xl font-serif font-bold py-3 border-b border-sage/10 transition-colors ${pathname === item.to ? 'text-terracotta' : 'text-sage hover:text-terracotta'}`}
             >
-              Contact Us
+              {item.label}
             </Link>
-          </div>
-        )}
+          ))}
+          <Link
+            to="/contact"
+            className="text-lg font-serif font-bold text-cream bg-terracotta px-6 py-4 rounded-lg text-center mt-4 hover:bg-sage transition-colors"
+          >
+            Contact Us
+          </Link>
+        </div>
       </header>
 
       <main className="flex-grow">
