@@ -14,9 +14,6 @@ const Contact: React.FC = () => {
     return '';
   }, [search]);
 
-  const emailSubject = "Inquiry for The Compassionate Law Project";
-  const mailtoLink = `mailto:vivekssankaran@gmail.com?subject=${encodeURIComponent(emailSubject)}`;
-
   return (
     <div className="bg-cream min-h-[80vh] py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background decorations */}
@@ -48,7 +45,7 @@ const Contact: React.FC = () => {
                 </svg>
               </div>
               <p className="font-sans font-bold uppercase tracking-widest text-xs text-terracotta mb-3">Email Us Directly</p>
-              <a href={mailtoLink} className="text-xl md:text-2xl font-serif text-sage hover:text-terracotta transition-colors break-all">
+              <a href="mailto:vivekssankaran@gmail.com" className="text-xl md:text-2xl font-serif text-sage hover:text-terracotta transition-colors break-all">
                 vivekssankaran@gmail.com
               </a>
             </div>
@@ -75,7 +72,11 @@ const Contact: React.FC = () => {
           {/* Form */}
           <div className="md:col-span-3 relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-sage/10 to-terracotta/10 rounded-2xl blur-xl opacity-50"></div>
-            <div className="relative bg-cream p-8 md:p-10 shadow-2xl border border-sage/10 rounded-xl space-y-6">
+            <form
+              action="https://formspree.io/f/mlgbezwe"
+              method="POST"
+              className="relative bg-cream p-8 md:p-10 shadow-2xl border border-sage/10 rounded-xl space-y-6"
+            >
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-full bg-terracotta/10 flex items-center justify-center">
                   <svg className="w-5 h-5 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,6 +91,7 @@ const Contact: React.FC = () => {
                   <label className="text-xs uppercase tracking-widest font-bold text-sage/60">I'm interested in...</label>
                   <div className="relative">
                     <select
+                      name="interest"
                       defaultValue={selectedInterest}
                       className="w-full bg-cream-darker border border-sage/20 p-4 rounded-lg focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 appearance-none transition-all"
                     >
@@ -107,15 +109,19 @@ const Contact: React.FC = () => {
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest font-bold text-sage/60">Name</label>
                     <input
+                      name="name"
                       placeholder="Your name"
+                      required
                       className="w-full bg-cream-darker border border-sage/20 p-4 rounded-lg focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 transition-all"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest font-bold text-sage/60">Email</label>
                     <input
+                      name="email"
                       placeholder="your@email.com"
                       type="email"
+                      required
                       className="w-full bg-cream-darker border border-sage/20 p-4 rounded-lg focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 transition-all"
                     />
                   </div>
@@ -123,27 +129,26 @@ const Contact: React.FC = () => {
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-widest font-bold text-sage/60">Message</label>
                   <textarea
+                    name="message"
                     placeholder="How can we help you?"
+                    required
                     className="w-full bg-cream-darker border border-sage/20 p-4 rounded-lg focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 h-32 resize-none transition-all"
                   ></textarea>
                 </div>
 
                 <div className="pt-4">
-                  <p className="text-xs text-center text-sage/50 mb-5 italic leading-relaxed">
-                    Note: This form is a visual guide. Clicking below will open your email client to send your message directly to us.
-                  </p>
-                  <a
-                    href={mailtoLink}
+                  <button
+                    type="submit"
                     className="flex items-center justify-center gap-3 w-full bg-sage text-cream py-5 font-sans font-bold uppercase tracking-widest hover:bg-terracotta transition-all duration-300 shadow-lg hover:shadow-xl rounded-lg hover:-translate-y-0.5"
                   >
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                     </svg>
-                    Send Email
-                  </a>
+                    Send Message
+                  </button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

@@ -5,24 +5,18 @@ const About: React.FC = () => {
   const team = [
     {
       name: "Vivek Sankaran",
-      title: "Clinical Professor of Law, University of Michigan Law School",
       image: "/Vivek.jpg",
-      bio: "Vivek is a Clinical Professor of Law at the University of Michigan Law School, where he directs the Child Advocacy Law Clinic and the Child Welfare Appellate Clinic. He founded the Detroit Center for Family Advocacy, an innovative program that prevents unnecessary foster care placements by addressing concrete family needs. Vivek has litigated numerous cases before the Michigan Supreme Court and is a certified Ambassador of Applied Compassion through Stanford University's Center for Compassion and Altruism Research and Education (CCARE). His work bridges the gap between legal excellence and human-centered practice, helping legal professionals sustain their commitment to justice while caring for themselves and those they serve.",
-      credentials: ["Stanford CCARE Ambassador", "Detroit Center for Family Advocacy Founder", "Child Advocacy Law Clinic Director"]
+      bio: "Vivek Sankaran is a clinical professor of law at the University of Michigan Law School, where he champions the rights of children and parents involved in child welfare proceedings. His work centers on transforming the child welfare system by empowering families, advancing justice through thoughtful legal reform, and building more compassionate legal institutions.\n\nSankaran directs both the Child Advocacy Law Clinic and the Child Welfare Appellate Clinic, where students represent clients in trial and appellate proceedings. He also co-directs Michigan Law's AI Law and Policy Clinic, equipping students to tackle critical justice challenges at the intersection of emerging technology, law, and ethics.\n\nNationally recognized for both his teaching and advocacy, Sankaran is the recipient of the John W. Reed Michigan Lawyer Legacy Award from the State Bar of Michigan and Michigan Law's Teaching Award for Support of Student Community and Well-Being. His appellate litigation has helped shape Michigan law on the rights of families.\n\nBeyond the courtroom and classroom, Sankaran is leading a national movement to bring compassion into legal practice. After completing the Applied Compassion Training at Stanford University, he now designs and facilitates compassion retreats across the country for judges, lawyers, and law students.\n\nIn 2009, he founded the Detroit Center for Family Advocacy, the first legal model in the nation to use multidisciplinary teams to prevent unnecessary foster care placements. He has worked closely with the American Bar Association, Casey Family Programs, and the National Center for State Courts on initiatives to promote justice and family preservation."
     },
     {
       name: "Bridgette Carr",
-      title: "Associate Dean for Equity, Justice & Community & Clinical Professor of Law, University of Michigan Law School",
       image: "/Bridgette.jpg",
-      bio: "Bridgette is the Associate Dean for Equity, Justice & Community and a Clinical Professor of Law at the University of Michigan Law School. She founded the nation's first Human Trafficking Clinic in 2009 and has spent her career creating systems that respond to harm with humanity. Bridgette has served as a Title IX hearing officer and brings deep expertise in trauma-informed practice and institutional culture change. Her driving belief is that if work can harm, work can also heal—and she's dedicated to proving that compassionate systems are not only possible but more effective.",
-      credentials: ["Human Trafficking Clinic Founder", "Associate Dean for Equity, Justice & Community", "Title IX Hearing Officer"]
+      bio: "Bridgette Carr is a Clinical Professor of Law at the University of Michigan and co-founder of The Compassionate Law Project.\n\nFor more than fifteen years, she has built spaces where people feel seen and heard. She founded Michigan Law's Human Trafficking Clinic, where she learned that small acts of human attention—making sure a client has clean clothes, returning a phone call when no one else would—can be as important as any legal victory. She co-created Designing a Fulfilling Life in the Law, a course that helps law students align their values with their daily practice.\n\nNow she co-leads the Compassionate Leadership Retreat with Vivek Sankaran and Rick Barinbaum: a phones-down, nature-based intensive that helps lawyers and judges carry heavy work with steadier presence, without burning out. She also co-directs Michigan Law's AI Law & Policy Clinic, exploring how technology might create more room for the human work that matters most.\n\nBridgette also serves as a Title IX hearing officer and as an expert witness in human trafficking matters. She has trained courts, law firms, and health systems nationwide on human trafficking.\n\nAcross all of her work runs a simple belief: when we create room for people to be fully human, the hardest work becomes possible."
     },
     {
       name: "Rick Barinbaum, LMSW",
-      title: "Licensed Master Social Worker & Facilitator",
       image: "/Rick.png",
-      bio: "Rick is a Licensed Master Social Worker who teaches at the University of Michigan School of Social Work. He serves as a facilitator for the Michigan State Bar's Commission on Well-Being in the Law, bringing expertise in resilience, self-compassion, and sustainable practice to legal professionals across the state. Rick specializes in building resilient teams in high-stress environments and provides consulting on compassion-based practice and team well-being. His background in social work brings a unique perspective to the legal profession, helping lawyers and judges develop practical tools for maintaining their humanity while doing difficult work.",
-      credentials: ["Licensed Master Social Worker", "University of Michigan School of Social Work Faculty", "Michigan Commission on Well-Being in the Law Facilitator"]
+      bio: "Rick Barinbaum, LMSW, is a clinical social worker who supports practitioners to flourish in hard, human-centered work. Rick brings a compassion lens that recognizes suffering, makes space for tension and contradiction, and helps people stay connected to purpose and meaning in work that is both demanding and deeply fulfilling.\n\nHe teaches at the University of Michigan Schools of Social Work and Law and serves as an expert consultant for students and faculty in the Law School's clinical program, teaching select classes alongside clinical faculty and consulting with students on active cases. His work focuses on supporting the well-being of law students, trauma-informed practice, client engagement, biopsychosocial assessment, and interdisciplinary strategy in practice areas including child advocacy, human trafficking, juvenile justice, and civil legal advocacy.\n\nIn addition to his teaching, Rick's compassion-focused work spans individual consultation, support to agencies and organizations, local and national speaking engagements, and co-facilitating compassion-focused retreats and trainings with colleagues in multiple states. He is also a facilitator with Michigan's Commission on Well-Being in the Law, a statewide initiative focused on strengthening well-being and resilience across the legal profession."
     }
   ];
 
@@ -69,20 +63,8 @@ const About: React.FC = () => {
 
               {/* Content */}
               <div className={`space-y-6 ${i % 2 === 1 ? 'md:order-1' : ''}`}>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-terracotta/10 rounded-full">
-                  <div className="w-2 h-2 rounded-full bg-terracotta"></div>
-                  <span className="text-terracotta text-xs font-bold uppercase tracking-wider">Team Member</span>
-                </div>
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-sage">{member.name}</h2>
-                <p className="font-sans leading-relaxed text-charcoal/60 text-lg italic border-l-4 border-terracotta/30 pl-4">{member.title}</p>
-                <p className="font-sans text-charcoal/70 leading-relaxed text-lg">{member.bio}</p>
-                <div className="flex flex-wrap gap-2 pt-4">
-                  {member.credentials.map((cred, j) => (
-                    <span key={j} className="px-4 py-2 bg-sage/5 border border-sage/10 rounded-full text-sm font-sans text-sage/80 hover:bg-sage/10 transition-colors">
-                      {cred}
-                    </span>
-                  ))}
-                </div>
+                <div className="font-sans text-charcoal/70 leading-relaxed text-lg whitespace-pre-line">{member.bio}</div>
               </div>
             </div>
           ))}

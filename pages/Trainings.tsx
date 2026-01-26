@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Trainings: React.FC = () => {
   return (
@@ -119,12 +120,12 @@ const Trainings: React.FC = () => {
           <p className="mb-12 text-charcoal/60 text-lg leading-relaxed max-w-xl mx-auto">
             We design custom programming for organizations across the country. Let's discuss how we can support your team.
           </p>
-          <a href="mailto:vivekssankaran@gmail.com?subject=Training%20Inquiry" className="inline-flex items-center gap-3 px-10 py-5 bg-sage text-cream font-sans font-bold uppercase tracking-widest hover:bg-terracotta hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg shadow-lg">
+          <Link to="/contact?interest=training" className="inline-flex items-center gap-3 px-10 py-5 bg-sage text-cream font-sans font-bold uppercase tracking-widest hover:bg-terracotta hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg shadow-lg">
             Inquire About Training
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
     </div>
