@@ -52,10 +52,11 @@ const About: React.FC = () => {
               <div className={`relative group ${i % 2 === 1 ? 'md:order-2' : ''}`}>
                 <div className="absolute -inset-4 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl border border-sage/10">
-                  <div
-                    className="absolute inset-0 bg-sage/10 bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
-                    style={{backgroundImage: `url(${member.image})`}}
-                  ></div>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-sage/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-cream opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                     <p className="font-serif text-lg font-bold">{member.name}</p>
