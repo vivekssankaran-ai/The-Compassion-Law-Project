@@ -91,7 +91,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`block px-5 py-3 text-base font-sans transition-colors ${pathname === item.to ? 'text-terracotta bg-sage-light/30' : 'text-cream hover:bg-sage-light/20 hover:text-terracotta'}`}
+                className="block px-5 py-3 text-base font-sans text-cream hover:bg-sage-light/20 transition-colors"
               >
                 {item.label}
               </Link>
