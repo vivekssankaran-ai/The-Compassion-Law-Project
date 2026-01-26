@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div className="bg-cream">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=2000"
@@ -15,21 +15,21 @@ const Home: React.FC = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/70"></div>
         </div>
-        <div className="relative z-10 max-w-5xl mx-auto text-center px-6 py-20">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif italic mb-10 leading-tight text-cream drop-shadow-2xl">
+        <div className="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 py-16 md:py-20">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif italic mb-6 md:mb-10 leading-tight text-cream drop-shadow-2xl">
             Compassion is not a weakness—it's the courage to remain human while doing difficult work.
           </h2>
-          <div className="flex items-center justify-center gap-4 mb-10">
-            <div className="w-16 h-px bg-cream/40"></div>
-            <div className="w-3 h-3 rounded-full bg-terracotta"></div>
-            <div className="w-16 h-px bg-cream/40"></div>
+          <div className="flex items-center justify-center gap-4 mb-6 md:mb-10">
+            <div className="w-12 md:w-16 h-px bg-cream/40"></div>
+            <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-terracotta"></div>
+            <div className="w-12 md:w-16 h-px bg-cream/40"></div>
           </div>
-          <p className="text-base md:text-lg font-sans text-cream/80 font-medium uppercase tracking-[0.25em] max-w-2xl mx-auto mb-12">
+          <p className="text-xs sm:text-sm md:text-lg font-sans text-cream/80 font-medium uppercase tracking-[0.15em] md:tracking-[0.25em] max-w-2xl mx-auto mb-8 md:mb-12">
             Transforming legal practice through compassion, connection, and care
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-terracotta text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-cream hover:text-sage hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-sm shadow-lg"
+            className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-10 py-3 md:py-4 bg-terracotta text-cream font-sans text-xs md:text-sm uppercase tracking-widest font-bold hover:bg-cream hover:text-sage hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-sm shadow-lg"
           >
             Begin Your Journey
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -37,17 +37,17 @@ const Home: React.FC = () => {
             </svg>
           </Link>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <svg className="w-6 h-6 text-cream/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+          <svg className="w-5 h-5 md:w-6 md:h-6 text-cream/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
       </section>
 
       {/* Main Blurb */}
-      <section className="py-28 px-6 max-w-5xl mx-auto text-center relative">
+      <section className="py-16 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto text-center relative">
         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full bg-terracotta/5 blur-3xl"></div>
-        <p className="text-2xl md:text-3xl lg:text-4xl font-serif leading-relaxed text-sage mb-16 italic relative">
+        <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-serif leading-relaxed text-sage mb-10 md:mb-16 italic relative">
           We believe that compassion belongs at the heart of legal practice. The Compassionate Law Project helps legal professionals develop the skills and resilience to sustain their commitment to justice—while caring deeply for themselves and those they serve.
         </p>
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 text-left items-stretch mt-20">

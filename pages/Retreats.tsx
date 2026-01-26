@@ -5,7 +5,7 @@ const Retreats: React.FC = () => {
   return (
     <div className="bg-cream">
       {/* Hero Section */}
-      <section className="py-32 md:py-40 px-6 bg-gradient-to-br from-sage via-sage to-sage-light text-cream text-center relative overflow-hidden">
+      <section className="py-20 md:py-40 px-4 sm:px-6 bg-gradient-to-br from-sage via-sage to-sage-light text-cream text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-cream blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-terracotta blur-3xl"></div>
@@ -14,7 +14,7 @@ const Retreats: React.FC = () => {
           <span className="inline-block px-6 py-2 bg-cream/10 rounded-full text-cream/80 text-xs uppercase tracking-[0.3em] font-bold mb-8 backdrop-blur-sm">
             Immersive Experiences
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight">Compassionate Leadership Retreats</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 md:mb-8 leading-tight">Compassionate Leadership Retreats</h1>
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="w-12 h-px bg-cream/30"></div>
             <div className="w-2 h-2 rounded-full bg-terracotta"></div>
@@ -27,7 +27,7 @@ const Retreats: React.FC = () => {
       </section>
 
       {/* Why Retreats Section */}
-      <section className="py-28 px-6 max-w-5xl mx-auto">
+      <section className="py-16 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 items-start">
           <div className="md:col-span-1">
             <div className="sticky top-32">
@@ -52,13 +52,13 @@ const Retreats: React.FC = () => {
       </section>
 
       {/* What to Expect Section */}
-      <section className="py-28 bg-gradient-to-b from-cream-darker to-cream px-6 relative">
+      <section className="py-16 md:py-28 bg-gradient-to-b from-cream-darker to-cream px-4 sm:px-6 relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sage/20 to-transparent"></div>
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-20 items-start">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-start">
           <div className="space-y-12">
             <div>
               <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">The Experience</span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-sage mt-3">What to Expect</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-sage mt-3">What to Expect</h2>
             </div>
             <div className="grid gap-6">
               {[
@@ -115,12 +115,12 @@ const Retreats: React.FC = () => {
       </section>
 
       {/* Upcoming Retreats Section */}
-      <section className="py-28 px-6 bg-cream relative">
+      <section className="py-16 md:py-28 px-4 sm:px-6 bg-cream relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-terracotta/30 to-transparent"></div>
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">On the Horizon</span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4">Upcoming Retreats</h2>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-sage mt-4">Upcoming Retreats</h2>
           </div>
           <div className="space-y-6">
             {[
@@ -146,11 +146,11 @@ const Retreats: React.FC = () => {
       </section>
 
       {/* Past Retreats Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-cream to-cream-darker relative">
+      <section className="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-cream to-cream-darker relative">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <span className="text-sage/60 font-sans text-xs uppercase tracking-[0.3em] font-bold">Our Journey</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-sage/80 mt-4">Past Retreats</h2>
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-sage/80 mt-4">Past Retreats</h2>
           </div>
           <div className="space-y-4">
             {[
@@ -177,11 +177,11 @@ const Retreats: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-28 px-6 bg-cream relative">
+      <section className="py-16 md:py-28 px-4 sm:px-6 bg-cream relative">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 md:mb-20">
             <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">From the Bench</span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4">What Judges Say</h2>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-sage mt-4">What Judges Say</h2>
           </div>
           <div className="grid gap-8 md:gap-10">
             {[
@@ -192,11 +192,11 @@ const Retreats: React.FC = () => {
               "For the first time in years, I felt like I could breathe. The retreat gave me permission to be human.",
               "The connections I made with other judges who truly understand this work have been invaluable. I no longer feel so alone."
             ].map((quote, i) => (
-              <blockquote key={i} className="group relative p-8 md:p-10 bg-gradient-to-br from-cream to-cream-darker rounded-xl border border-sage/10 hover:border-terracotta/20 hover:shadow-xl transition-all duration-500">
-                <svg className="absolute top-6 left-6 w-10 h-10 text-terracotta/10 group-hover:text-terracotta/20 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              <blockquote key={i} className="group relative p-6 md:p-8 lg:p-10 bg-gradient-to-br from-cream to-cream-darker rounded-xl border border-sage/10 hover:border-terracotta/20 hover:shadow-xl transition-all duration-500">
+                <svg className="absolute top-4 left-4 md:top-6 md:left-6 w-8 h-8 md:w-10 md:h-10 text-terracotta/10 group-hover:text-terracotta/20 transition-colors" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-xl md:text-2xl font-serif italic text-sage leading-relaxed pl-8">
+                <p className="text-lg md:text-xl lg:text-2xl font-serif italic text-sage leading-relaxed pl-6 md:pl-8">
                   "{quote}"
                 </p>
               </blockquote>
@@ -206,21 +206,21 @@ const Retreats: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-28 bg-gradient-to-br from-sage via-sage to-sage-light text-cream text-center relative overflow-hidden">
+      <section className="py-16 md:py-28 bg-gradient-to-br from-sage via-sage to-sage-light text-cream text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-cream blur-3xl"></div>
         </div>
-        <div className="relative max-w-3xl mx-auto px-6">
-          <div className="w-16 h-16 rounded-full bg-cream/10 flex items-center justify-center mx-auto mb-8">
-            <svg className="w-8 h-8 text-terracotta" fill="currentColor" viewBox="0 0 24 24">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6">
+          <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-cream/10 flex items-center justify-center mx-auto mb-6 md:mb-8">
+            <svg className="w-7 h-7 md:w-8 md:h-8 text-terracotta" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Ready to restore your compassion?</h2>
-          <p className="text-cream/70 text-lg mb-10 max-w-xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4 md:mb-6">Ready to restore your compassion?</h2>
+          <p className="text-cream/70 text-base md:text-lg mb-8 md:mb-10 max-w-xl mx-auto">
             Join our community of legal professionals who believe that caring for yourself is essential to caring for others.
           </p>
-          <Link to="/contact?interest=retreat" className="inline-flex items-center gap-3 px-10 py-5 bg-terracotta hover:bg-cream hover:text-sage transition-all duration-300 font-sans font-bold uppercase tracking-widest shadow-xl rounded-lg hover:shadow-2xl hover:-translate-y-1">
+          <Link to="/contact?interest=retreat" className="inline-flex items-center gap-2 md:gap-3 px-8 md:px-10 py-4 md:py-5 bg-terracotta hover:bg-cream hover:text-sage transition-all duration-300 font-sans text-sm md:text-base font-bold uppercase tracking-widest shadow-xl rounded-lg hover:shadow-2xl hover:-translate-y-1">
             Get in Touch
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
