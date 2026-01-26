@@ -13,24 +13,23 @@ const Home: React.FC = () => {
             alt="Serene landscape"
             className="w-full h-full object-cover scale-105 animate-[slowZoom_20s_ease-in-out_infinite_alternate]"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-sage/40 via-sage/20 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-cream via-cream/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/70"></div>
         </div>
         <div className="relative z-10 max-w-5xl mx-auto text-center px-6 py-20">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif italic mb-10 leading-tight text-sage drop-shadow-lg">
-            "Compassion is not a weakness—it's the courage to remain human while doing difficult work."
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif italic mb-10 leading-tight text-cream drop-shadow-2xl">
+            Compassion is not a weakness—it's the courage to remain human while doing difficult work.
           </h2>
           <div className="flex items-center justify-center gap-4 mb-10">
-            <div className="w-16 h-px bg-terracotta/60"></div>
-            <div className="w-3 h-3 rounded-full bg-terracotta/40"></div>
-            <div className="w-16 h-px bg-terracotta/60"></div>
+            <div className="w-16 h-px bg-cream/40"></div>
+            <div className="w-3 h-3 rounded-full bg-terracotta"></div>
+            <div className="w-16 h-px bg-cream/40"></div>
           </div>
-          <p className="text-base md:text-lg font-sans text-charcoal/70 font-medium uppercase tracking-[0.25em] max-w-2xl mx-auto mb-12">
+          <p className="text-base md:text-lg font-sans text-cream/80 font-medium uppercase tracking-[0.25em] max-w-2xl mx-auto mb-12">
             Transforming legal practice through compassion, connection, and care
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-sage text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-terracotta hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-sm shadow-lg"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-terracotta text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-cream hover:text-sage hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-sm shadow-lg"
           >
             Begin Your Journey
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,7 +38,7 @@ const Home: React.FC = () => {
           </Link>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <svg className="w-6 h-6 text-sage/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-6 h-6 text-cream/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
@@ -151,23 +150,24 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Resources */}
+      {/* Follow Our Substack */}
       <section className="py-28 bg-gradient-to-b from-sage/5 to-cream px-6 relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sage/20 to-transparent"></div>
         <div className="max-w-5xl mx-auto text-center">
-          <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Learn More</span>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4 mb-16">Resources</h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a href="https://viveksankaran.substack.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 px-8 py-5 bg-terracotta text-cream font-sans text-xs uppercase tracking-widest font-bold hover:bg-sage hover:shadow-xl transition-all duration-300 rounded-lg">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-              </svg>
-              More Time To Be Human
-              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          </div>
+          <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Stay Connected</span>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4 mb-6">Follow Our Substack</h2>
+          <p className="text-charcoal/60 text-lg mb-12 max-w-2xl mx-auto">
+            Join our community for reflections on compassion, resilience, and what it means to do hard work with humanity.
+          </p>
+          <a href="https://viveksankaran.substack.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-4 px-10 py-5 bg-terracotta text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-sage hover:shadow-xl transition-all duration-300 rounded-lg shadow-lg hover:-translate-y-1">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+            More Time To Be Human
+            <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </section>
     </div>
