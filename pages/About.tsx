@@ -23,7 +23,7 @@ const About: React.FC = () => {
   return (
     <div className="bg-cream">
       {/* Hero Section */}
-      <section className="py-28 md:py-36 px-6 text-center max-w-5xl mx-auto relative">
+      <section className="py-16 md:py-36 px-4 sm:px-6 text-center max-w-5xl mx-auto relative">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full bg-sage/5 blur-3xl"></div>
         <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Our Team</span>
         <h1 className="text-5xl md:text-7xl font-serif font-bold text-sage mt-4 mb-8">About Us</h1>
@@ -38,33 +38,29 @@ const About: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="space-y-32 md:space-y-40">
+      <section className="py-12 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="space-y-20 md:space-y-40">
           {team.map((member, i) => (
-            <div key={i} className={`grid md:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+            <div key={i} className={`grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
               {/* Image */}
               <div className={`relative group ${i % 2 === 1 ? 'md:order-2' : ''}`}>
-                <div className="absolute -inset-4 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl border border-sage/10">
+                <div className="absolute -inset-4 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden md:block"></div>
+                <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-xl md:shadow-2xl border border-sage/10 max-w-xs mx-auto md:max-w-none">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sage/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-cream opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                    <p className="font-serif text-lg font-bold">{member.name}</p>
-                  </div>
                 </div>
-                {/* Decorative elements */}
-                <div className={`absolute -z-10 w-24 h-24 rounded-full bg-terracotta/10 ${i % 2 === 0 ? '-top-6 -right-6' : '-top-6 -left-6'}`}></div>
-                <div className={`absolute -z-10 w-16 h-16 rounded-full bg-sage/10 ${i % 2 === 0 ? '-bottom-4 -left-4' : '-bottom-4 -right-4'}`}></div>
+                {/* Decorative elements - hidden on mobile */}
+                <div className={`absolute -z-10 w-24 h-24 rounded-full bg-terracotta/10 hidden md:block ${i % 2 === 0 ? '-top-6 -right-6' : '-top-6 -left-6'}`}></div>
+                <div className={`absolute -z-10 w-16 h-16 rounded-full bg-sage/10 hidden md:block ${i % 2 === 0 ? '-bottom-4 -left-4' : '-bottom-4 -right-4'}`}></div>
               </div>
 
               {/* Content */}
-              <div className={`space-y-6 ${i % 2 === 1 ? 'md:order-1' : ''}`}>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-sage">{member.name}</h2>
-                <div className="font-sans text-charcoal/70 leading-relaxed text-lg whitespace-pre-line">{member.bio}</div>
+              <div className={`space-y-4 md:space-y-6 ${i % 2 === 1 ? 'md:order-1' : ''}`}>
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-sage text-center md:text-left">{member.name}</h2>
+                <div className="font-sans text-charcoal/70 leading-relaxed text-base md:text-lg whitespace-pre-line">{member.bio}</div>
               </div>
             </div>
           ))}
@@ -72,15 +68,15 @@ const About: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-cream to-cream-darker">
+      <section className="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-cream to-cream-darker">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-sage mb-6">Ready to bring compassion to your practice?</h2>
-          <p className="text-charcoal/60 text-lg mb-10 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sage mb-4 md:mb-6">Ready to bring compassion to your practice?</h2>
+          <p className="text-charcoal/60 text-base md:text-lg mb-8 md:mb-10 max-w-2xl mx-auto">
             Let's explore how compassion-centered training can transform your organization and support your people.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-sage text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-terracotta hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg shadow-lg"
+            className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-10 py-4 md:py-5 bg-sage text-cream font-sans text-xs md:text-sm uppercase tracking-widest font-bold hover:bg-terracotta hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg shadow-lg"
           >
             Get in Touch
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
