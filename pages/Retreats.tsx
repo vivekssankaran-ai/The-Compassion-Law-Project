@@ -117,70 +117,59 @@ const Retreats: React.FC = () => {
       {/* Upcoming Retreats Section */}
       <section className="py-28 px-6 bg-cream relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-terracotta/30 to-transparent"></div>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Join Us</span>
+            <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">On the Horizon</span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4">Upcoming Retreats</h2>
-            <p className="text-charcoal/60 mt-4 max-w-2xl mx-auto">Reserve your spot for an immersive experience designed to restore and strengthen your practice.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-6">
             {[
-              { date: "April 2025", location: "North Dakota", audience: "Family Court Judges & Professionals", status: "Open" },
-              { date: "June 2025", location: "Texas", audience: "Legal Professionals", status: "Open" },
-              { date: "September 2025", location: "Michigan", audience: "Child Welfare Advocates", status: "Coming Soon" },
-              { date: "October 2025", location: "Michigan", audience: "Judges & Court Staff", status: "Coming Soon" }
+              { date: "April 2025", name: "North Dakota Judicial Compassion Retreat", location: "Coteau des Prairies Lodge, Rutland, North Dakota" },
+              { date: "June 2025", name: "Texas Judicial Compassion Retreat", location: "Sage Hill Retreat Center, Kyle, Texas" },
+              { date: "September 2025", name: "Michigan Judicial Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" },
+              { date: "October 2025", name: "Michigan Lawyer Well-Being Retreat", location: "The Homestead, Glen Arbor, Michigan" }
             ].map((retreat, i) => (
-              <div key={i} className="group relative bg-gradient-to-br from-cream to-cream-darker p-8 rounded-xl border border-sage/10 hover:border-terracotta/30 hover:shadow-xl transition-all duration-500">
-                <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${retreat.status === 'Open' ? 'bg-terracotta/10 text-terracotta' : 'bg-sage/10 text-sage'}`}>
-                    {retreat.status}
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sage transition-colors duration-300">
-                    <svg className="w-7 h-7 text-sage group-hover:text-cream transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+              <div key={i} className="group p-6 md:p-8 bg-gradient-to-br from-cream to-cream-darker rounded-xl border border-sage/10 hover:border-terracotta/20 hover:shadow-lg transition-all duration-300">
+                <div className="flex flex-col md:flex-row md:items-center gap-4">
+                  <div className="md:w-32 flex-shrink-0">
+                    <span className="text-terracotta font-sans text-sm font-bold uppercase tracking-wider">{retreat.date}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-2xl font-bold text-sage mb-1 group-hover:text-terracotta transition-colors">{retreat.date}</h3>
-                    <p className="text-terracotta font-semibold mb-2">{retreat.location}</p>
-                    <p className="text-charcoal/60 text-sm">{retreat.audience}</p>
+                    <h3 className="font-serif text-xl md:text-2xl font-bold text-sage group-hover:text-terracotta transition-colors">{retreat.name}</h3>
+                    <p className="text-charcoal/60 mt-1">{retreat.location}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Link to="/contact?interest=retreat" className="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-sage transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl">
-              Register Your Interest
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* Past Retreats Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-cream to-cream-darker relative">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="py-24 px-6 bg-gradient-to-b from-cream to-cream-darker relative">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
             <span className="text-sage/60 font-sans text-xs uppercase tracking-[0.3em] font-bold">Our Journey</span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-sage/80 mt-4">Past Retreats</h2>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="space-y-4">
             {[
-              { date: "December 2024", location: "Georgia" },
-              { date: "October 2024", location: "Washington" },
-              { date: "October 2024", location: "Colorado" },
-              { date: "September 2024", location: "Michigan" }
+              { date: "December 2024", name: "Georgia Juvenile Court Compassion Retreat", location: "Atlanta Evergreen Lakeside Resort, Stone Mountain, Georgia" },
+              { date: "September 2024", name: "Juvenile Court Referee Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" },
+              { date: "October 2024", name: "ICWA Judicial Compassion Retreat", location: "Skamania Lodge, Stevenson, Washington" },
+              { date: "October 2024", name: "ICWA Judicial Compassion Retreat", location: "The Colorado Chautauqua, Boulder, Colorado" },
+              { date: "September 2024", name: "Michigan Judicial Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" }
             ].map((retreat, i) => (
-              <div key={i} className="flex items-center gap-3 px-5 py-3 bg-sage/5 rounded-full border border-sage/10">
-                <div className="w-2 h-2 rounded-full bg-sage/40"></div>
-                <span className="text-charcoal/60 font-sans text-sm">
-                  <span className="font-semibold text-sage/70">{retreat.date}</span> • {retreat.location}
-                </span>
+              <div key={i} className="p-5 md:p-6 bg-sage/5 rounded-lg border border-sage/10">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                  <div className="md:w-36 flex-shrink-0">
+                    <span className="text-sage/70 font-sans text-sm font-semibold">{retreat.date}</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-lg text-sage/80">{retreat.name}</h3>
+                    <p className="text-charcoal/50 text-sm">{retreat.location}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -196,21 +185,20 @@ const Retreats: React.FC = () => {
           </div>
           <div className="grid gap-8 md:gap-10">
             {[
-              { quote: "I highly recommend this retreat for anyone working in a child welfare capacity. Even after 27 years as a jurist, this retreat opened my eyes and heart in so many ways. You will leave a better person and jurist because of it.", author: "Family Court Judge" },
-              { quote: "To feel seen and heard by others in a similar situation has granted me a sense of peace that I have not felt in a long time.", author: "Family Court Judge" },
-              { quote: "A great reset to continue our work with integrity, compassion, and renewed passion.", author: "Juvenile Court Judge" }
-            ].map((item, i) => (
+              "I highly recommend this retreat for anyone working in a child welfare capacity. Even after 27 years as a jurist, this retreat opened my eyes and heart in so many ways. You will leave a better person and jurist because of it.",
+              "To feel seen and heard by others in a similar situation has granted me a sense of peace that I have not felt in a long time.",
+              "A great reset to continue our work with integrity, compassion, and renewed passion.",
+              "This retreat reminded me why I became a judge in the first place. It gave me tools to carry the weight of this work without losing myself.",
+              "For the first time in years, I felt like I could breathe. The retreat gave me permission to be human.",
+              "The connections I made with other judges who truly understand this work have been invaluable. I no longer feel so alone."
+            ].map((quote, i) => (
               <blockquote key={i} className="group relative p-8 md:p-10 bg-gradient-to-br from-cream to-cream-darker rounded-xl border border-sage/10 hover:border-terracotta/20 hover:shadow-xl transition-all duration-500">
                 <svg className="absolute top-6 left-6 w-10 h-10 text-terracotta/10 group-hover:text-terracotta/20 transition-colors" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-xl md:text-2xl font-serif italic text-sage leading-relaxed pl-8 mb-6">
-                  "{item.quote}"
+                <p className="text-xl md:text-2xl font-serif italic text-sage leading-relaxed pl-8">
+                  "{quote}"
                 </p>
-                <footer className="pl-8 flex items-center gap-3">
-                  <div className="w-8 h-px bg-terracotta/40"></div>
-                  <span className="text-charcoal/50 font-sans text-sm uppercase tracking-wider">{item.author}</span>
-                </footer>
               </blockquote>
             ))}
           </div>
@@ -233,7 +221,7 @@ const Retreats: React.FC = () => {
             Join our community of legal professionals who believe that caring for yourself is essential to caring for others.
           </p>
           <Link to="/contact?interest=retreat" className="inline-flex items-center gap-3 px-10 py-5 bg-terracotta hover:bg-cream hover:text-sage transition-all duration-300 font-sans font-bold uppercase tracking-widest shadow-xl rounded-lg hover:shadow-2xl hover:-translate-y-1">
-            Get notified about upcoming retreats
+            Get in Touch
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
