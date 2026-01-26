@@ -80,7 +80,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`md:hidden fixed inset-x-0 top-20 bottom-0 bg-cream z-40 flex flex-col px-6 py-8 gap-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
+          className={`md:hidden fixed inset-x-0 top-20 bottom-0 bg-sage z-40 flex flex-col px-6 py-8 gap-4 shadow-2xl transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
         >
           {[
             { to: "/", label: "Home" },
@@ -91,14 +91,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <Link
               key={item.to}
               to={item.to}
-              className={`text-xl font-serif font-bold py-3 border-b border-sage/10 transition-colors ${pathname === item.to ? 'text-terracotta' : 'text-sage hover:text-terracotta'}`}
+              className={`text-xl font-serif font-bold py-3 border-b border-cream/20 transition-colors ${pathname === item.to ? 'text-terracotta' : 'text-cream hover:text-terracotta'}`}
             >
               {item.label}
             </Link>
           ))}
           <Link
             to="/contact"
-            className="text-lg font-serif font-bold text-cream bg-terracotta px-6 py-4 rounded-lg text-center mt-4 hover:bg-sage transition-colors"
+            className="text-lg font-serif font-bold text-sage bg-cream px-6 py-4 rounded-lg text-center mt-4 hover:bg-terracotta hover:text-cream transition-colors"
           >
             Contact Us
           </Link>
