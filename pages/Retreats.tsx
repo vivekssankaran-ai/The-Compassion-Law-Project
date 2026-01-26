@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Retreats: React.FC = () => {
   return (
@@ -151,12 +152,12 @@ const Retreats: React.FC = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="mailto:vivekssankaran@gmail.com?subject=Retreat%20Registration%20Interest" className="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-sage transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl">
+            <Link to="/contact?interest=retreat" className="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-cream font-sans text-sm uppercase tracking-widest font-bold hover:bg-sage transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl">
               Register Your Interest
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -190,14 +191,14 @@ const Retreats: React.FC = () => {
       <section className="py-28 px-6 bg-cream relative">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20">
-            <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Testimonials</span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4">What Participants Say</h2>
+            <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">From the Bench</span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4">What Judges Say</h2>
           </div>
           <div className="grid gap-8 md:gap-10">
             {[
               { quote: "I highly recommend this retreat for anyone working in a child welfare capacity. Even after 27 years as a jurist, this retreat opened my eyes and heart in so many ways. You will leave a better person and jurist because of it.", author: "Family Court Judge" },
-              { quote: "To feel seen and heard by others in a similar situation has granted me a sense of peace that I have not felt in a long time.", author: "Public Defender" },
-              { quote: "A great reset to continue our work with integrity, compassion, and renewed passion.", author: "Juvenile Court Administrator" }
+              { quote: "To feel seen and heard by others in a similar situation has granted me a sense of peace that I have not felt in a long time.", author: "Family Court Judge" },
+              { quote: "A great reset to continue our work with integrity, compassion, and renewed passion.", author: "Juvenile Court Judge" }
             ].map((item, i) => (
               <blockquote key={i} className="group relative p-8 md:p-10 bg-gradient-to-br from-cream to-cream-darker rounded-xl border border-sage/10 hover:border-terracotta/20 hover:shadow-xl transition-all duration-500">
                 <svg className="absolute top-6 left-6 w-10 h-10 text-terracotta/10 group-hover:text-terracotta/20 transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -231,12 +232,12 @@ const Retreats: React.FC = () => {
           <p className="text-cream/70 text-lg mb-10 max-w-xl mx-auto">
             Join our community of legal professionals who believe that caring for yourself is essential to caring for others.
           </p>
-          <a href="mailto:vivekssankaran@gmail.com?subject=Retreat%20Interest" className="inline-flex items-center gap-3 px-10 py-5 bg-terracotta hover:bg-cream hover:text-sage transition-all duration-300 font-sans font-bold uppercase tracking-widest shadow-xl rounded-lg hover:shadow-2xl hover:-translate-y-1">
+          <Link to="/contact?interest=retreat" className="inline-flex items-center gap-3 px-10 py-5 bg-terracotta hover:bg-cream hover:text-sage transition-all duration-300 font-sans font-bold uppercase tracking-widest shadow-xl rounded-lg hover:shadow-2xl hover:-translate-y-1">
             Get notified about upcoming retreats
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
     </div>

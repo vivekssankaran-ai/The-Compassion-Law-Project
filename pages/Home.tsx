@@ -17,9 +17,6 @@ const Home: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-cream via-cream/40 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-5xl mx-auto text-center px-6 py-20">
-          <div className="inline-block mb-8">
-            <span className="text-terracotta font-sans text-sm uppercase tracking-[0.4em] font-semibold">Welcome to</span>
-          </div>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif italic mb-10 leading-tight text-sage drop-shadow-lg">
             "Compassion is not a weakness—it's the courage to remain human while doing difficult work."
           </h2>
@@ -161,18 +158,6 @@ const Home: React.FC = () => {
           <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Learn More</span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-sage mt-4 mb-16">Resources</h2>
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="group flex items-center gap-3 px-8 py-5 border-2 border-sage/20 font-sans text-xs uppercase tracking-widest font-bold hover:bg-sage hover:text-cream hover:border-sage transition-all duration-300 rounded-lg hover:shadow-lg">
-              <svg className="w-5 h-5 text-terracotta group-hover:text-cream transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Program Menu (PDF)
-            </button>
-            <button className="group flex items-center gap-3 px-8 py-5 border-2 border-sage/20 font-sans text-xs uppercase tracking-widest font-bold hover:bg-sage hover:text-cream hover:border-sage transition-all duration-300 rounded-lg hover:shadow-lg">
-              <svg className="w-5 h-5 text-terracotta group-hover:text-cream transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Retreat Agenda (PDF)
-            </button>
             <a href="https://viveksankaran.substack.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 px-8 py-5 bg-terracotta text-cream font-sans text-xs uppercase tracking-widest font-bold hover:bg-sage hover:shadow-xl transition-all duration-300 rounded-lg">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
