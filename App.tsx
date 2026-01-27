@@ -124,7 +124,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 Developing human-centered leaders across the legal profession—from law students to the bench.
               </p>
               <div className="flex gap-4 pt-2">
-                <a href="mailto:compassionatelawpractice@gmail.com" className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-terracotta hover:text-cream transition-all duration-300">
+                <a href="mailto:compassionatelawproject@gmail.com" className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-terracotta hover:text-cream transition-all duration-300">
                   <MailIcon className="w-5 h-5" />
                 </a>
                 <a href="https://viveksankaran.substack.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-terracotta hover:text-cream transition-all duration-300">
@@ -142,11 +142,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 Connect
               </h3>
               <div className="space-y-4">
-                <a href="mailto:compassionatelawpractice@gmail.com" className="group flex items-center gap-3 hover:text-terracotta transition-colors">
+                <a href="mailto:compassionatelawproject@gmail.com" className="group flex items-center gap-3 hover:text-terracotta transition-colors">
                   <div className="w-8 h-8 rounded-lg bg-cream/5 flex items-center justify-center group-hover:bg-terracotta/20 transition-colors">
                     <MailIcon className="w-4 h-4" />
                   </div>
-                  <span className="text-sm">compassionatelawpractice@gmail.com</span>
+                  <span className="text-sm">compassionatelawproject@gmail.com</span>
                 </a>
                 <a href="https://compassionatelawproject.com" className="group flex items-center gap-3 hover:text-terracotta transition-colors">
                   <div className="w-8 h-8 rounded-lg bg-cream/5 flex items-center justify-center group-hover:bg-terracotta/20 transition-colors">
