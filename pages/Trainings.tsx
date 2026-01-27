@@ -39,18 +39,15 @@ const Trainings: React.FC = () => {
               { label: "Half / Full Day", duration: "Customizable", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", desc: "Deep dives for comprehensive learning" },
               { label: "Multi-Day", duration: "Custom design", icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z", desc: "Tailored retreats for organizations" }
             ].map((f, i) => (
-              <div key={i} className="group bg-cream p-5 sm:p-6 md:p-8 lg:p-10 text-center border border-sage/10 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-terracotta/30 transition-all duration-500 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-terracotta/0 to-terracotta/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="relative">
-                  <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-sage/10 flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-terracotta/10 transition-colors">
-                    <svg className="w-5 h-5 md:w-7 md:h-7 text-sage group-hover:text-terracotta transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={f.icon} />
-                    </svg>
-                  </div>
-                  <h4 className="font-serif text-lg md:text-xl lg:text-2xl font-bold text-sage mb-1 md:mb-2 group-hover:text-terracotta transition-colors">{f.label}</h4>
-                  <p className="text-terracotta font-sans text-[10px] md:text-xs uppercase tracking-widest font-bold mb-2 md:mb-3">{f.duration}</p>
-                  <p className="text-charcoal/50 text-xs md:text-sm hidden sm:block">{f.desc}</p>
+              <div key={i} className="bg-cream p-5 sm:p-6 md:p-8 lg:p-10 text-center border border-sage/10 rounded-xl shadow-md">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-sage/10 flex items-center justify-center mx-auto mb-4 md:mb-6">
+                  <svg className="w-5 h-5 md:w-7 md:h-7 text-sage" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={f.icon} />
+                  </svg>
                 </div>
+                <h4 className="font-serif text-lg md:text-xl lg:text-2xl font-bold text-sage mb-1 md:mb-2">{f.label}</h4>
+                <p className="text-terracotta font-sans text-[10px] md:text-xs uppercase tracking-widest font-bold mb-2 md:mb-3">{f.duration}</p>
+                <p className="text-charcoal/50 text-xs md:text-sm hidden sm:block">{f.desc}</p>
               </div>
             ))}
           </div>
