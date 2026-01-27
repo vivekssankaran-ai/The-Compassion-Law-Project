@@ -154,9 +154,9 @@ const Retreats: React.FC = () => {
           </div>
           <div className="space-y-4">
             {[
-              { date: "December 2024", name: "Georgia Juvenile Court Compassion Retreat", location: "Atlanta Evergreen Lakeside Resort, Stone Mountain, Georgia" },
-              { date: "September 2024", name: "Juvenile Court Referee Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" },
-              { date: "October 2024", name: "ICWA Judicial Compassion Retreat", location: "Skamania Lodge, Stevenson, Washington" },
+              { date: "December 2025", name: "Georgia Juvenile Court Compassion Retreat", location: "Atlanta Evergreen Lakeside Resort, Stone Mountain, Georgia" },
+              { date: "September 2025", name: "Juvenile Court Referee Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" },
+              { date: "October 2025", name: "ICWA Judicial Compassion Retreat", location: "Skamania Lodge, Stevenson, Washington" },
               { date: "October 2024", name: "ICWA Judicial Compassion Retreat", location: "The Colorado Chautauqua, Boulder, Colorado" },
               { date: "September 2024", name: "Michigan Judicial Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" }
             ].map((retreat, i) => (
