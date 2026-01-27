@@ -49,7 +49,7 @@ const About: React.FC = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Decorative elements - hidden on mobile */}

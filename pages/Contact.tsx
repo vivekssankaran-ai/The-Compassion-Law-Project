@@ -45,8 +45,8 @@ const Contact: React.FC = () => {
                 </svg>
               </div>
               <p className="font-sans font-bold uppercase tracking-widest text-xs text-terracotta mb-2 md:mb-3">Email Us Directly</p>
-              <a href="mailto:vivekssankaran@gmail.com" className="text-lg md:text-xl lg:text-2xl font-serif text-sage hover:text-terracotta transition-colors break-all">
-                vivekssankaran@gmail.com
+              <a href="mailto:compassionatelawpractice@gmail.com" className="text-lg md:text-xl lg:text-2xl font-serif text-sage hover:text-terracotta transition-colors break-all">
+                compassionatelawpractice@gmail.com
               </a>
             </div>
 
