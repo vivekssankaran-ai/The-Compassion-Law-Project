@@ -45,27 +45,9 @@ const Contact: React.FC = () => {
                 </svg>
               </div>
               <p className="font-sans font-bold uppercase tracking-widest text-xs text-terracotta mb-2 md:mb-3">Email Us Directly</p>
-              <a href="mailto:compassionatelawproject@gmail.com" className="text-lg md:text-xl lg:text-2xl font-serif text-sage hover:text-terracotta transition-colors break-all">
-                compassionatelawproject@gmail.com
+              <a href="mailto:compassionatelawproject@gmail.com" className="text-base md:text-lg lg:text-xl font-serif text-sage hover:text-terracotta transition-colors">
+                compassionatelawproject<wbr />@gmail.com
               </a>
-            </div>
-
-            <div className="p-5 md:p-8 bg-sage/5 rounded-xl border border-sage/10">
-              <h3 className="font-serif text-lg md:text-xl font-bold text-sage mb-3 md:mb-4">What to expect</h3>
-              <ul className="space-y-4 text-charcoal/60">
-                {[
-                  "Response within 2-3 business days",
-                  "Initial consultation call to understand your needs",
-                  "Customized proposal based on your goals"
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <svg className="w-5 h-5 text-terracotta flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
 
