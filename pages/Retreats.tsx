@@ -127,7 +127,7 @@ const Retreats: React.FC = () => {
               { date: "April 2026", name: "North Dakota Judicial Compassion Retreat (Private)", location: "Coteau des Prairies Lodge, Rutland, North Dakota" },
               { date: "June 2026", name: "Texas Judicial Compassion Retreat (Private)", location: "Sage Hill Retreat Center, Kyle, Texas" },
               { date: "September 2026", name: "Michigan Judicial Compassion Retreat (Private)", location: "Butzel Retreat Center, Ortonville, Michigan" },
-              { date: "October 2026", name: "Michigan Lawyer Well-Being Retreat", location: "TBD" }
+              { date: "October 15-18, 2026", name: "Michigan Lawyer Well-Being Retreat", location: "Treetops Resort, Gaylord, Michigan", signUpLink: "https://www.eventbrite.com/e/2026-lawyer-wellness-retreat-tickets-1983968548335?aff=oddtdtcreator" }
             ].map((retreat, i) => (
               <div key={i} className="group p-6 md:p-8 bg-gradient-to-br from-cream to-cream-darker rounded-xl border border-sage/10 hover:border-terracotta/20 hover:shadow-lg transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
@@ -137,6 +137,19 @@ const Retreats: React.FC = () => {
                   <div className="flex-1">
                     <h3 className="font-serif text-xl md:text-2xl font-bold text-sage group-hover:text-terracotta transition-colors">{retreat.name}</h3>
                     <p className="text-charcoal/60 mt-1">{retreat.location}</p>
+                    {retreat.signUpLink && (
+                      <a
+                        href={retreat.signUpLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-terracotta text-cream font-sans text-xs font-bold uppercase tracking-widest hover:bg-sage transition-all duration-300 rounded-lg shadow-md hover:shadow-lg"
+                      >
+                        Sign Up
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
