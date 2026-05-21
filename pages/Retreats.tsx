@@ -124,7 +124,6 @@ const Retreats: React.FC = () => {
           </div>
           <div className="space-y-6">
             {[
-              { date: "April 2026", name: "North Dakota Judicial Compassion Retreat (Private)", location: "Coteau des Prairies Lodge, Rutland, North Dakota" },
               { date: "June 2026", name: "Texas Judicial Compassion Retreat (Private)", location: "Sage Hill Retreat Center, Kyle, Texas" },
               { date: "September 2026", name: "Michigan Judicial Compassion Retreat (Private)", location: "Butzel Retreat Center, Ortonville, Michigan" },
               { date: "October 15-18, 2026", name: "Michigan Lawyer Well-Being Retreat", location: "Treetops Resort, Gaylord, Michigan", signUpLink: "https://www.eventbrite.com/e/2026-lawyer-wellness-retreat-tickets-1983968548335?aff=oddtdtcreator" }
@@ -167,6 +166,7 @@ const Retreats: React.FC = () => {
           </div>
           <div className="space-y-4">
             {[
+              { date: "April 2026", name: "North Dakota Judicial Compassion Retreat", location: "Coteau des Prairies Lodge, Rutland, North Dakota" },
               { date: "December 2025", name: "Georgia Juvenile Court Compassion Retreat", location: "Atlanta Evergreen Lakeside Resort, Stone Mountain, Georgia" },
               { date: "September 2025", name: "Juvenile Court Referee Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" },
               { date: "October 2025", name: "ICWA Judicial Compassion Retreat", location: "Skamania Lodge, Stevenson, Washington" },
