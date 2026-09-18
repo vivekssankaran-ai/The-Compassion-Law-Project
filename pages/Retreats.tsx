@@ -164,7 +164,7 @@ const Retreats: React.FC = () => {
           </div>
           <div className="space-y-4">
             {[
-              { date: "September 2026", name: "Judicial Compassion Retreat 2.0", location: "Brighton, Michigan" },
+              { date: "September 2026", name: "Judicial Compassion Retreat 2.0", location: "Waldenwoods Resort, Brighton, Michigan" },
               { date: "June 2026", name: "Texas Judicial Compassion Retreat (Private)", location: "Sage Hill Retreat Center, Kyle, Texas" },
               { date: "April 2026", name: "North Dakota Judicial Compassion Retreat", location: "Coteau des Prairies Lodge, Rutland, North Dakota" },
               { date: "December 2025", name: "Georgia Juvenile Court Compassion Retreat", location: "Atlanta Evergreen Lakeside Resort, Stone Mountain, Georgia" },
