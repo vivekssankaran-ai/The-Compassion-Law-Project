@@ -5,6 +5,7 @@ import Retreats from './pages/Retreats';
 import Trainings from './pages/Trainings';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import LawyerRetreat2027 from './pages/LawyerRetreat2027';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -249,6 +250,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/retreats" element={<Retreats />} />
+          <Route path="/retreats/lawyer-retreat-2027" element={<LawyerRetreat2027 />} />
           <Route path="/trainings" element={<Trainings />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

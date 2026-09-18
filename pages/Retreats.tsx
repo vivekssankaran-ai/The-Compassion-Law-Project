@@ -134,19 +134,30 @@ const Retreats: React.FC = () => {
                   <div className="flex-1">
                     <h3 className="font-serif text-xl md:text-2xl font-bold text-sage group-hover:text-terracotta transition-colors">{retreat.name}</h3>
                     <p className="text-charcoal/60 mt-1">{retreat.location}</p>
-                    {retreat.signUpLink && (
-                      <a
-                        href={retreat.signUpLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-terracotta text-cream font-sans text-xs font-bold uppercase tracking-widest hover:bg-sage transition-all duration-300 rounded-lg shadow-md hover:shadow-lg"
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Link
+                        to="/retreats/lawyer-retreat-2027"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-sage/10 text-sage font-sans text-xs font-bold uppercase tracking-widest hover:bg-sage hover:text-cream transition-all duration-300 rounded-lg"
                       >
-                        Sign Up
+                        Learn More
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
-                      </a>
-                    )}
+                      </Link>
+                      {retreat.signUpLink && (
+                        <a
+                          href={retreat.signUpLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-terracotta text-cream font-sans text-xs font-bold uppercase tracking-widest hover:bg-sage transition-all duration-300 rounded-lg shadow-md hover:shadow-lg"
+                        >
+                          Register
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
