@@ -22,64 +22,146 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-cream">
-      {/* Hero Section */}
-      <section className="py-16 md:py-36 px-4 sm:px-6 text-center max-w-5xl mx-auto relative">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full bg-sage/5 blur-3xl"></div>
-        <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Our Team</span>
-        <h1 className="text-5xl md:text-7xl font-serif font-bold text-sage mt-4 mb-8">About Us</h1>
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="w-12 h-px bg-terracotta/40"></div>
-          <div className="w-2 h-2 rounded-full bg-terracotta/30"></div>
-          <div className="w-12 h-px bg-terracotta/40"></div>
+      {/* Full-Screen Hero */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80"
+            alt="Mountain peaks at golden hour"
+            className="w-full h-full object-cover"
+            style={{ animation: 'slowZoom 20s ease-out forwards' }}
+          />
+          <div className="hero-overlay absolute inset-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/30 to-cream"></div>
         </div>
-        <p className="text-xl md:text-2xl font-serif italic text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-          United by a shared belief: compassion is not a soft skill—it's the foundation of effective, sustainable legal practice.
-        </p>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+          <span className="inline-block px-6 py-2 bg-cream/10 backdrop-blur-sm rounded-full text-cream/90 text-xs uppercase tracking-[0.3em] font-bold mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            Our Team
+          </span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-cream mb-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            About Us
+          </h1>
+          <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <div className="w-16 h-px bg-cream/40"></div>
+            <div className="w-2 h-2 rounded-full bg-terracotta"></div>
+            <div className="w-16 h-px bg-cream/40"></div>
+          </div>
+          <p className="text-xl md:text-2xl font-serif italic text-cream/80 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '1s' }}>
+            United by a shared belief: compassion is not a soft skill—it's the foundation of effective, sustainable legal practice.
+          </p>
+        </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
-        <div className="space-y-20 md:space-y-40">
+      <section className="py-24 md:py-40 px-6 max-w-7xl mx-auto">
+        <div className="space-y-32 md:space-y-48">
           {team.map((member, i) => (
-            <div key={i} className={`grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+            <div key={i} className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-start ${i % 2 === 1 ? 'reveal-right' : 'reveal-left'}`}>
               {/* Image */}
-              <div className={`relative group ${i % 2 === 1 ? 'md:order-2' : ''}`}>
-                <div className="absolute -inset-4 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden md:block"></div>
-                <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-xl md:shadow-2xl border border-sage/10 max-w-xs mx-auto md:max-w-none">
+              <div className={`relative group ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <div className="absolute -inset-6 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden lg:block"></div>
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-sage/10 max-w-md mx-auto lg:max-w-none">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sage/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                {/* Decorative elements - hidden on mobile */}
-                <div className={`absolute -z-10 w-24 h-24 rounded-full bg-terracotta/10 hidden md:block ${i % 2 === 0 ? '-top-6 -right-6' : '-top-6 -left-6'}`}></div>
-                <div className={`absolute -z-10 w-16 h-16 rounded-full bg-sage/10 hidden md:block ${i % 2 === 0 ? '-bottom-4 -left-4' : '-bottom-4 -right-4'}`}></div>
+                {/* Decorative elements */}
+                <div className={`absolute -z-10 w-32 h-32 rounded-full bg-terracotta/10 hidden lg:block ${i % 2 === 0 ? '-top-8 -right-8' : '-top-8 -left-8'}`}></div>
+                <div className={`absolute -z-10 w-20 h-20 rounded-full bg-sage/10 hidden lg:block ${i % 2 === 0 ? '-bottom-6 -left-6' : '-bottom-6 -right-6'}`}></div>
               </div>
 
               {/* Content */}
-              <div className={`space-y-4 md:space-y-6 ${i % 2 === 1 ? 'md:order-1' : ''}`}>
-                <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-sage text-center md:text-left">{member.name}</h2>
-                <div className="font-sans text-charcoal/70 leading-relaxed text-base md:text-lg whitespace-pre-line">{member.bio}</div>
+              <div className={`space-y-6 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <div>
+                  <div className="w-12 h-1 bg-terracotta mb-6"></div>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-sage">{member.name}</h2>
+                </div>
+                <div className="font-sans text-charcoal/70 leading-relaxed text-lg space-y-6">
+                  {member.bio.split('\n\n').map((paragraph, j) => (
+                    <p key={j}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-cream to-cream-darker">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sage mb-4 md:mb-6">Ready to bring compassion to your practice?</h2>
-          <p className="text-charcoal/60 text-base md:text-lg mb-8 md:mb-10 max-w-2xl mx-auto">
+      {/* Image Break with Quote */}
+      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=2000&q=80"
+          alt="Foggy mountain valley at dawn"
+          className="w-full h-full object-cover parallax-slow"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-sage/50 via-sage/30 to-terracotta/30"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p className="text-cream text-2xl md:text-4xl lg:text-5xl font-serif italic text-center px-6 max-w-4xl animate-parallax-float">
+            "When we create room for people to be fully human, the hardest work becomes possible."
+          </p>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-24 md:py-40 px-6 bg-gradient-to-b from-cream-darker to-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center reveal">
+            <div>
+              <span className="text-terracotta font-sans text-xs uppercase tracking-[0.3em] font-bold">Our Mission</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-sage mt-4 mb-8 leading-tight">Bringing Compassion to Legal Practice</h2>
+              <div className="space-y-6 text-lg text-charcoal/70 leading-relaxed">
+                <p>
+                  We believe that the legal profession's greatest strength lies not in detachment, but in the capacity to hold space for human complexity while maintaining professional excellence.
+                </p>
+                <p>
+                  Through evidence-based training and immersive retreats, we help legal professionals develop sustainable practices that honor both their commitment to justice and their own humanity.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { number: "15+", label: "Years of Experience" },
+                { number: "500+", label: "Legal Professionals Trained" },
+                { number: "20+", label: "Retreats Facilitated" },
+                { number: "12", label: "States Reached" }
+              ].map((stat, i) => (
+                <div key={i} className="p-6 md:p-8 bg-cream rounded-2xl border border-sage/10 text-center hover:shadow-xl transition-all duration-300 hover:border-terracotta/20">
+                  <div className="text-4xl md:text-5xl font-serif font-bold text-terracotta mb-2">{stat.number}</div>
+                  <div className="text-charcoal/50 text-sm uppercase tracking-wider">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-Screen CTA */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2000&q=80"
+            alt="Starlit mountain landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-sage/70"></div>
+        </div>
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto reveal-scale">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-cream mb-6">Ready to bring compassion to your practice?</h2>
+          <p className="text-cream/70 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
             Let's explore how compassion-centered training can transform your organization and support your people.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-10 py-4 md:py-5 bg-sage text-cream font-sans text-xs md:text-sm uppercase tracking-widest font-bold hover:bg-terracotta hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg shadow-lg"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-terracotta hover:bg-cream hover:text-sage transition-all duration-300 font-sans text-sm uppercase tracking-widest font-bold shadow-xl rounded-xl hover:shadow-2xl hover:-translate-y-1 text-cream"
           >
             Get in Touch
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

@@ -53,25 +53,176 @@
       /* Custom animations */
       @keyframes slowZoom {
         0% { transform: scale(1); }
-        100% { transform: scale(1.1); }
+        100% { transform: scale(1.15); }
       }
       @keyframes fadeInUp {
-        0% { opacity: 0; transform: translateY(20px); }
+        0% { opacity: 0; transform: translateY(40px); }
         100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
       }
       @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-10px); }
       }
-      .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-      .animate-float { animation: float 3s ease-in-out infinite; }
+      @keyframes parallaxFloat {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-20px) scale(1.02); }
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      @keyframes breathe {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+      @keyframes slideInLeft {
+        0% { opacity: 0; transform: translateX(-60px); }
+        100% { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes slideInRight {
+        0% { opacity: 0; transform: translateX(60px); }
+        100% { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes scaleIn {
+        0% { opacity: 0; transform: scale(0.9); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+
+      .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+      .animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+      .animate-float { animation: float 4s ease-in-out infinite; }
+      .animate-parallax-float { animation: parallaxFloat 8s ease-in-out infinite; }
+      .animate-breathe { animation: breathe 4s ease-in-out infinite; }
+      .animate-slide-in-left { animation: slideInLeft 1s ease-out forwards; }
+      .animate-slide-in-right { animation: slideInRight 1s ease-out forwards; }
+      .animate-scale-in { animation: scaleIn 0.8s ease-out forwards; }
+
+      /* Scroll-triggered animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-60px);
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal-left.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .reveal-right {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal-right.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .reveal-scale {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal-scale.active {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Staggered children animations */
+      .stagger-children > * {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .stagger-children.active > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+      .stagger-children.active > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+      .stagger-children.active > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+      .stagger-children.active > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+      .stagger-children.active > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+      .stagger-children.active > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+
+      /* Parallax effect */
+      .parallax-slow {
+        will-change: transform;
+        transition: transform 0.1s linear;
+      }
+
+      /* Gradient text */
+      .gradient-text {
+        background: linear-gradient(135deg, #4A5D4E 0%, #6B8070 50%, #C26D4D 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Luxury image treatment */
+      .luxury-image {
+        position: relative;
+        overflow: hidden;
+      }
+      .luxury-image::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(74, 93, 78, 0.1) 0%, transparent 50%, rgba(194, 109, 77, 0.1) 100%);
+        pointer-events: none;
+      }
 
       /* Smooth transitions */
       * { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
 
       /* Better focus states */
       *:focus-visible { outline: 2px solid #C26D4D; outline-offset: 2px; }
+
+      /* Hero overlay gradients */
+      .hero-overlay {
+        background: linear-gradient(180deg,
+          rgba(51, 51, 51, 0.4) 0%,
+          rgba(51, 51, 51, 0.2) 30%,
+          rgba(51, 51, 51, 0.2) 70%,
+          rgba(51, 51, 51, 0.5) 100%
+        );
+      }
+
+      /* Decorative line */
+      .decorative-line {
+        background: linear-gradient(90deg, transparent, #C26D4D, transparent);
+      }
     </style>
+    <script>
+      // Scroll reveal animation
+      document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, observerOptions);
+
+        // Observe all reveal elements
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-children').forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
   <script type="importmap">
 {
   "imports": {
