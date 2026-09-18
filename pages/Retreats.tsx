@@ -124,7 +124,7 @@ const Retreats: React.FC = () => {
           </div>
           <div className="space-y-6">
             {[
-              { date: "January 27-29, 2027", name: "Compassionate Leadership Retreat for Lawyers", location: "Location TBA", signUpLink: "https://blocksurvey.io/compassion-retreat-registration-Jrfr_lG.RJ.IqDzWQlLtJA?v=l" }
+              { date: "January 27-29, 2027", name: "Compassionate Leadership Retreat for Lawyers", location: "Maryville Retreat Center, Holly, Michigan", signUpLink: "https://blocksurvey.io/compassion-retreat-registration-Jrfr_lG.RJ.IqDzWQlLtJA?v=l" }
             ].map((retreat, i) => (
               <div key={i} className="group p-6 md:p-8 bg-gradient-to-br from-cream to-cream-darker rounded-xl border border-sage/10 hover:border-terracotta/20 hover:shadow-lg transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
