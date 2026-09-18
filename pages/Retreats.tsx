@@ -154,9 +154,7 @@ const Retreats: React.FC = () => {
           </div>
           <div className="space-y-8 stagger-children">
             {[
-              { date: "June 2026", name: "Texas Judicial Compassion Retreat (Private)", location: "Sage Hill Retreat Center, Kyle, Texas" },
-              { date: "September 2026", name: "Michigan Judicial Compassion Retreat (Private)", location: "Butzel Retreat Center, Ortonville, Michigan" },
-              { date: "October 15-18, 2026", name: "Michigan Lawyer Well-Being Retreat", location: "Treetops Resort, Gaylord, Michigan", signUpLink: "https://www.eventbrite.com/e/2026-lawyer-wellness-retreat-tickets-1983968548335?aff=oddtdtcreator" }
+              { date: "January 27-29, 2027", name: "Compassionate Leadership Retreat for Lawyers", location: "Location TBA", signUpLink: "https://blocksurvey.io/compassion-retreat-registration-Jrfr_lG.RJ.IqDzWQlLtJA?v=l" }
             ].map((retreat, i) => (
               <div key={i} className="group p-8 md:p-10 bg-gradient-to-br from-cream to-cream-darker rounded-2xl border border-sage/10 hover:border-terracotta/20 hover:shadow-2xl transition-all duration-500">
                 <div className="flex flex-col lg:flex-row lg:items-center gap-6">
@@ -196,6 +194,8 @@ const Retreats: React.FC = () => {
           </div>
           <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
             {[
+              { date: "September 2026", name: "Judicial Compassion Retreat 2.0", location: "Brighton, Michigan" },
+              { date: "June 2026", name: "Texas Judicial Compassion Retreat (Private)", location: "Sage Hill Retreat Center, Kyle, Texas" },
               { date: "April 2026", name: "North Dakota Judicial Compassion Retreat", location: "Coteau des Prairies Lodge, Rutland, North Dakota" },
               { date: "December 2025", name: "Georgia Juvenile Court Compassion Retreat", location: "Atlanta Evergreen Lakeside Resort, Stone Mountain, Georgia" },
               { date: "September 2025", name: "Juvenile Court Referee Compassion Retreat", location: "Butzel Retreat Center, Ortonville, Michigan" },
